@@ -1,0 +1,202 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020.0   SegPar
+020.1   BtnPediluvio
+020.2   BtnZapper
+021     Min
+022     Seg
+023     i
+024-060 num
+061-062 q
+063-066 Amp
+067     @TRIS_C
+068-069 @ITOF.P1
+068-06B @FLT.P2
+068     lcd_init.i
+068     Animacion.@SCRATCH1
+068     @PSTRINGC7_627.@SCRATCH1
+068     LeerADC.@SCRATCH1
+068     Mostrar1.@SCRATCH1
+068     Mostrar2.@SCRATCH1
+068     Estado.@SCRATCH1
+068     PediluvioOperando.@SCRATCH1
+069-06C lcd_init.LCD_INIT_STRING
+069     @PSTRINGC7_627.@SCRATCH2
+069     LeerADC.@SCRATCH2
+069     Mostrar1.@SCRATCH2
+069     Mostrar2.@SCRATCH2
+06A     @PRINTF_D0_627.P1
+06A-06D @PRINTF_L32D_627FPFPF.P2
+06A     @PSTRINGCN7_627.P3
+06A     @PSTRINGC7_627.@SCRATCH3
+06A     LeerADC.@SCRATCH3
+06B     @PRINTF_D0_627.P1
+06B     @PSTRINGC7_627.@SCRATCH4
+06B     LeerADC.@SCRATCH4
+06B     @PSTRINGCN7_627.@SCRATCH1
+06C-06F @DIVFF.P1
+06C-06F @FLT.P2
+06C     @PSTRINGCN7_627.@SCRATCH2
+06C     @PRINTF_D0_627.@SCRATCH1
+06D     lcd_init.@SCRATCH1
+06D     @PSTRINGCN7_627.@SCRATCH3
+06D     @PRINTF_D0_627.@SCRATCH2
+06E     @PRINTF_L32D_627FPFPF.P1
+06E     @PSTRINGCN7_627.@SCRATCH4
+06E     @PRINTF_D0_627.@SCRATCH3
+06F     @PRINTF_D0_627.@SCRATCH4
+06F     @PRINTF_L32D_627FPFPF.@SCRATCH1
+070-073 @DIVFF.P1
+070     @DIV88.P2
+070     @PRINTF_L32D_627FPFPF.@SCRATCH2
+070     @FLT.@SCRATCH1
+071     @DIV88.P1
+071     @PRINTF_L32D_627FPFPF.@SCRATCH3
+071     @FLT.@SCRATCH2
+072     @DIV88.@SCRATCH1
+072     @PRINTF_L32D_627FPFPF.@SCRATCH4
+073     @PRINTF_L32D_627FPFPF.@SCRATCH5
+074     @PRINTF_L32D_627FPFPF.@SCRATCH6
+075     @PRINTF_L32D_627FPFPF.@SCRATCH7
+076     @PRINTF_L32D_627FPFPF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     lcd_putc.c
+07B-07E @DIV3232.P1
+07B-07E @MULFF.P2
+07B-07E @FTOSD.P3
+07C     @delay_ms1.P1
+07C     lcd_gotoxy.x
+07D     lcd_gotoxy.y
+07E     lcd_gotoxy.address
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0A3 @DIV3232.P1
+0A0-0A3 @MULFF.P2
+0A0     lcd_gotoxy.@SCRATCH1
+0A0     @DIVFF.@SCRATCH1
+0A0     @FTOSD.@SCRATCH1
+0A1     lcd_send_byte.address
+0A1     @DIVFF.@SCRATCH2
+0A2     lcd_send_byte.n
+0A2     @DIVFF.@SCRATCH3
+0A3     lcd_read_byte.low
+0A3     lcd_send_byte.@SCRATCH1
+0A3     @DIVFF.@SCRATCH4
+0A4     lcd_send_nibble.n
+0A4     lcd_read_byte.high
+0A4     @MULFF.@SCRATCH1
+0A4     @DIVFF.@SCRATCH5
+0A4     @DIV3232.@SCRATCH1
+0A5     lcd_read_byte.@SCRATCH1
+0A5     @MULFF.@SCRATCH2
+0A5     @DIVFF.@SCRATCH6
+0A5     @DIV3232.@SCRATCH2
+0A6     @MULFF.@SCRATCH3
+0A6     @DIV3232.@SCRATCH3
+0A7     @MULFF.@SCRATCH4
+0A7     @DIV3232.@SCRATCH4
+0A8     @MULFF.@SCRATCH5
+0A8     @DIV3232.@SCRATCH5
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const651.call
+00000D  @const653.call
+000016  @const654.call
+00001F  @const655.call
+000028  @const656.call
+000031  @const657.call
+00003A  @const658.call
+000043  @const659.call
+00004C  @const660.call
+000055  @const661.call
+00005E  @const662.call
+000067  @const674.call
+000073  @const692.call
+00007F  @const697.call
+000088  @const698.call
+000092  @const700.call
+00009B  @const701.call
+0000A5  @const703.call
+0000AE  @const705.call
+0000B7  @const706.call
+0000C0  @const707.call
+0000C9  @const708.call
+0000D2  @delay_ms1
+0000E7  lcd_send_nibble
+0000FB  lcd_read_nibble
+000101  lcd_send_byte
+000109  lcd_read_byte
+000162  lcd_init
+0001AF  lcd_gotoxy
+0001C3  lcd_putc
+0001F5  @PSTRINGC7_627
+00024B  Animacion
+0002F2  @MULFF
+000378  LeerADC
+000385  @ITOF
+0003C7  @DIVFF
+0004B0  @PSTRINGCN7_627
+000507  @DIV3232
+000558  @PRINTF_L32D_627FPFPF
+000581  @FTOSD
+000640  Pitido
+00065D  Exceso
+00066B  @FLT
+0006DB  Pediluvio
+00070D  Estado
+000753  @DIV88
+000768  @PRINTF_D0_627
+000800  PediluvioOperando
+00085C  Mostrar1
+0008BF  Mostrar2
+000953  MAIN
+000953  @cinit1
+00095F  @cinit2
+
+Project Directory:
+    D:\Proyectos\IonicPed + Zapper\Desarrollo\Software\
+
+Project Files:
+    PIZ.c                                                   [16-nov-17 08:31  CRC=D6266B80]
+    C:\Program Files\PICC\Devices\16f876a.h                 [12-nov-13 14:35  CRC=7FE1E080]
+    C:\Program Files\PICC\Drivers\lcd.c                     [19-sep-13 15:38  CRC=D1A6378A]
+
+Source signature=F954BB14
+
+Units:
+    PIZ (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   PIZ.xsym
+    Errors:      PIZ.err
+    Ext Symbols: PIZ.esym
+    INHX8:       PIZ.hex
+    Symbols:     PIZ.sym
+    List:        PIZ.lst
+    Debug/COFF:  PIZ.cof
+    Project:     PIZ.ccspjt
+    Call Tree:   PIZ.tre
+    Statistics:  PIZ.STA
